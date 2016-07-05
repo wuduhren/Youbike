@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  YoubikeTableViewController.h
 //  Youbike
 //
 //  Created by Eph on 2016/7/5.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface YoubikeTableViewController : UITableViewController
 
 @end
-

@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		F9E6CF001D2B4C0B00E8B2F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6CEFF1D2B4C0B00E8B2F1 /* main.m */; };
 		F9E6CF031D2B4C0B00E8B2F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6CF021D2B4C0B00E8B2F1 /* AppDelegate.m */; };
-		F9E6CF061D2B4C0B00E8B2F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6CF051D2B4C0B00E8B2F1 /* ViewController.m */; };
-		F9E6CF091D2B4C0B00E8B2F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E6CF071D2B4C0B00E8B2F1 /* Main.storyboard */; };
 		F9E6CF0B1D2B4C0B00E8B2F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E6CF0A1D2B4C0B00E8B2F1 /* Assets.xcassets */; };
 		F9E6CF0E1D2B4C0B00E8B2F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E6CF0C1D2B4C0B00E8B2F1 /* LaunchScreen.storyboard */; };
-		F9E6CF1A1D2B546F00E8B2F1 /* YoubikeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6CF191D2B546F00E8B2F1 /* YoubikeTableView.m */; };
+		F9E6CF201D2B5D5A00E8B2F1 /* YoubikeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6CF1F1D2B5D5A00E8B2F1 /* YoubikeTableViewController.m */; };
+		F9E6CF231D2B5E8600E8B2F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E6CF221D2B5E8600E8B2F1 /* Main.storyboard */; };
+		F9E6CF251D2B5E9D00E8B2F1 /* YoubikeDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E6CF241D2B5E9D00E8B2F1 /* YoubikeDataTableViewCell.xib */; };
+		F9E6CF281D2B7CBA00E8B2F1 /* youbike.json in Resources */ = {isa = PBXBuildFile; fileRef = F9E6CF271D2B7CBA00E8B2F1 /* youbike.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +22,14 @@
 		F9E6CEFF1D2B4C0B00E8B2F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F9E6CF011D2B4C0B00E8B2F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F9E6CF021D2B4C0B00E8B2F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F9E6CF041D2B4C0B00E8B2F1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F9E6CF051D2B4C0B00E8B2F1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F9E6CF081D2B4C0B00E8B2F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9E6CF0A1D2B4C0B00E8B2F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9E6CF0D1D2B4C0B00E8B2F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9E6CF0F1D2B4C0B00E8B2F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9E6CF181D2B546F00E8B2F1 /* YoubikeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoubikeTableView.h; sourceTree = SOURCE_ROOT; };
-		F9E6CF191D2B546F00E8B2F1 /* YoubikeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoubikeTableView.m; sourceTree = SOURCE_ROOT; };
+		F9E6CF1E1D2B5D5A00E8B2F1 /* YoubikeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoubikeTableViewController.h; sourceTree = SOURCE_ROOT; };
+		F9E6CF1F1D2B5D5A00E8B2F1 /* YoubikeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoubikeTableViewController.m; sourceTree = SOURCE_ROOT; };
+		F9E6CF221D2B5E8600E8B2F1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F9E6CF241D2B5E9D00E8B2F1 /* YoubikeDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YoubikeDataTableViewCell.xib; sourceTree = "<group>"; };
+		F9E6CF271D2B7CBA00E8B2F1 /* youbike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = youbike.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +62,11 @@
 		F9E6CEFD1D2B4C0B00E8B2F1 /* Youbike */ = {
 			isa = PBXGroup;
 			children = (
-				F9E6CF181D2B546F00E8B2F1 /* YoubikeTableView.h */,
-				F9E6CF191D2B546F00E8B2F1 /* YoubikeTableView.m */,
-				F9E6CF011D2B4C0B00E8B2F1 /* AppDelegate.h */,
-				F9E6CF021D2B4C0B00E8B2F1 /* AppDelegate.m */,
-				F9E6CF041D2B4C0B00E8B2F1 /* ViewController.h */,
-				F9E6CF051D2B4C0B00E8B2F1 /* ViewController.m */,
-				F9E6CF071D2B4C0B00E8B2F1 /* Main.storyboard */,
+				F9E6CF291D2B974E00E8B2F1 /* Model */,
+				F9E6CF261D2B5FC600E8B2F1 /* Utilities */,
+				F9E6CF211D2B5E6600E8B2F1 /* View */,
+				F9E6CF1E1D2B5D5A00E8B2F1 /* YoubikeTableViewController.h */,
+				F9E6CF1F1D2B5D5A00E8B2F1 /* YoubikeTableViewController.m */,
 				F9E6CF0A1D2B4C0B00E8B2F1 /* Assets.xcassets */,
 				F9E6CF0C1D2B4C0B00E8B2F1 /* LaunchScreen.storyboard */,
 				F9E6CF0F1D2B4C0B00E8B2F1 /* Info.plist */,
@@ -79,9 +78,35 @@
 		F9E6CEFE1D2B4C0B00E8B2F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F9E6CF271D2B7CBA00E8B2F1 /* youbike.json */,
 				F9E6CEFF1D2B4C0B00E8B2F1 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9E6CF211D2B5E6600E8B2F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9E6CF221D2B5E8600E8B2F1 /* Main.storyboard */,
+				F9E6CF241D2B5E9D00E8B2F1 /* YoubikeDataTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F9E6CF261D2B5FC600E8B2F1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F9E6CF011D2B4C0B00E8B2F1 /* AppDelegate.h */,
+				F9E6CF021D2B4C0B00E8B2F1 /* AppDelegate.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		F9E6CF291D2B974E00E8B2F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +168,9 @@
 			files = (
 				F9E6CF0E1D2B4C0B00E8B2F1 /* LaunchScreen.storyboard in Resources */,
 				F9E6CF0B1D2B4C0B00E8B2F1 /* Assets.xcassets in Resources */,
-				F9E6CF091D2B4C0B00E8B2F1 /* Main.storyboard in Resources */,
+				F9E6CF281D2B7CBA00E8B2F1 /* youbike.json in Resources */,
+				F9E6CF231D2B5E8600E8B2F1 /* Main.storyboard in Resources */,
+				F9E6CF251D2B5E9D00E8B2F1 /* YoubikeDataTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,9 +181,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9E6CF1A1D2B546F00E8B2F1 /* YoubikeTableView.m in Sources */,
-				F9E6CF061D2B4C0B00E8B2F1 /* ViewController.m in Sources */,
 				F9E6CF031D2B4C0B00E8B2F1 /* AppDelegate.m in Sources */,
+				F9E6CF201D2B5D5A00E8B2F1 /* YoubikeTableViewController.m in Sources */,
 				F9E6CF001D2B4C0B00E8B2F1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,14 +190,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F9E6CF071D2B4C0B00E8B2F1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9E6CF081D2B4C0B00E8B2F1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F9E6CF0C1D2B4C0B00E8B2F1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -308,6 +326,7 @@
 				F9E6CF141D2B4C0B00E8B2F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
