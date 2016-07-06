@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCFC9048ACFA6EF208B8D975 /* Pods_Youbike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C254AB59AB7E291E8A72648 /* Pods_Youbike.framework */; };
+		F9962CA11D2B9CAE00D455FA /* YoubikeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9962CA01D2B9CAE00D455FA /* YoubikeModel.m */; };
+		F9962CA41D2BB23300D455FA /* YoubikeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9962CA31D2BB23300D455FA /* YoubikeManager.m */; };
 		F9E6CF001D2B4C0B00E8B2F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6CEFF1D2B4C0B00E8B2F1 /* main.m */; };
 		F9E6CF031D2B4C0B00E8B2F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6CF021D2B4C0B00E8B2F1 /* AppDelegate.m */; };
 		F9E6CF0B1D2B4C0B00E8B2F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E6CF0A1D2B4C0B00E8B2F1 /* Assets.xcassets */; };
@@ -18,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C254AB59AB7E291E8A72648 /* Pods_Youbike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youbike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		467DDD6CBB84D9D1EDBD0DD5 /* Pods-Youbike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youbike.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youbike/Pods-Youbike.release.xcconfig"; sourceTree = "<group>"; };
+		A3DB02309A797D3BD83EAD98 /* Pods-Youbike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youbike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youbike/Pods-Youbike.debug.xcconfig"; sourceTree = "<group>"; };
+		F9962C9F1D2B9CAE00D455FA /* YoubikeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoubikeModel.h; sourceTree = "<group>"; };
+		F9962CA01D2B9CAE00D455FA /* YoubikeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoubikeModel.m; sourceTree = "<group>"; };
+		F9962CA21D2BB23300D455FA /* YoubikeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoubikeManager.h; sourceTree = "<group>"; };
+		F9962CA31D2BB23300D455FA /* YoubikeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoubikeManager.m; sourceTree = "<group>"; };
 		F9E6CEFB1D2B4C0B00E8B2F1 /* Youbike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youbike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E6CEFF1D2B4C0B00E8B2F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F9E6CF011D2B4C0B00E8B2F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCFC9048ACFA6EF208B8D975 /* Pods_Youbike.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EDB03331415DA6C6DF5CF56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C254AB59AB7E291E8A72648 /* Pods_Youbike.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDAB3BDB140ADCD5A24E68C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3DB02309A797D3BD83EAD98 /* Pods-Youbike.debug.xcconfig */,
+				467DDD6CBB84D9D1EDBD0DD5 /* Pods-Youbike.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F9E6CEF21D2B4C0B00E8B2F1 = {
 			isa = PBXGroup;
 			children = (
 				F9E6CEFD1D2B4C0B00E8B2F1 /* Youbike */,
 				F9E6CEFC1D2B4C0B00E8B2F1 /* Products */,
+				BDAB3BDB140ADCD5A24E68C9 /* Pods */,
+				4EDB03331415DA6C6DF5CF56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,14 +92,11 @@
 		F9E6CEFD1D2B4C0B00E8B2F1 /* Youbike */ = {
 			isa = PBXGroup;
 			children = (
-				F9E6CF291D2B974E00E8B2F1 /* Model */,
+				F9E6CF291D2B974E00E8B2F1 /* Youbike */,
 				F9E6CF261D2B5FC600E8B2F1 /* Utilities */,
 				F9E6CF211D2B5E6600E8B2F1 /* View */,
 				F9E6CF1E1D2B5D5A00E8B2F1 /* YoubikeTableViewController.h */,
 				F9E6CF1F1D2B5D5A00E8B2F1 /* YoubikeTableViewController.m */,
-				F9E6CF0A1D2B4C0B00E8B2F1 /* Assets.xcassets */,
-				F9E6CF0C1D2B4C0B00E8B2F1 /* LaunchScreen.storyboard */,
-				F9E6CF0F1D2B4C0B00E8B2F1 /* Info.plist */,
 				F9E6CEFE1D2B4C0B00E8B2F1 /* Supporting Files */,
 			);
 			path = Youbike;
@@ -78,6 +105,9 @@
 		F9E6CEFE1D2B4C0B00E8B2F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F9E6CF0F1D2B4C0B00E8B2F1 /* Info.plist */,
+				F9E6CF0A1D2B4C0B00E8B2F1 /* Assets.xcassets */,
+				F9E6CF0C1D2B4C0B00E8B2F1 /* LaunchScreen.storyboard */,
 				F9E6CF271D2B7CBA00E8B2F1 /* youbike.json */,
 				F9E6CEFF1D2B4C0B00E8B2F1 /* main.m */,
 			);
@@ -102,11 +132,15 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
-		F9E6CF291D2B974E00E8B2F1 /* Model */ = {
+		F9E6CF291D2B974E00E8B2F1 /* Youbike */ = {
 			isa = PBXGroup;
 			children = (
+				F9962C9F1D2B9CAE00D455FA /* YoubikeModel.h */,
+				F9962CA01D2B9CAE00D455FA /* YoubikeModel.m */,
+				F9962CA21D2BB23300D455FA /* YoubikeManager.h */,
+				F9962CA31D2BB23300D455FA /* YoubikeManager.m */,
 			);
-			name = Model;
+			name = Youbike;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9E6CF121D2B4C0B00E8B2F1 /* Build configuration list for PBXNativeTarget "Youbike" */;
 			buildPhases = (
+				51541B26557988904B52CC11 /* 📦 Check Pods Manifest.lock */,
 				F9E6CEF71D2B4C0B00E8B2F1 /* Sources */,
 				F9E6CEF81D2B4C0B00E8B2F1 /* Frameworks */,
 				F9E6CEF91D2B4C0B00E8B2F1 /* Resources */,
+				6168F97372166880F4A1FFA5 /* 📦 Embed Pods Frameworks */,
+				A4D09EC66731659F6EFD2035 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,6 +213,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		51541B26557988904B52CC11 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6168F97372166880F4A1FFA5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Youbike/Pods-Youbike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4D09EC66731659F6EFD2035 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Youbike/Pods-Youbike-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F9E6CEF71D2B4C0B00E8B2F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -183,6 +268,8 @@
 			files = (
 				F9E6CF031D2B4C0B00E8B2F1 /* AppDelegate.m in Sources */,
 				F9E6CF201D2B5D5A00E8B2F1 /* YoubikeTableViewController.m in Sources */,
+				F9962CA11D2B9CAE00D455FA /* YoubikeModel.m in Sources */,
+				F9962CA41D2BB23300D455FA /* YoubikeManager.m in Sources */,
 				F9E6CF001D2B4C0B00E8B2F1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +372,7 @@
 		};
 		F9E6CF131D2B4C0B00E8B2F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3DB02309A797D3BD83EAD98 /* Pods-Youbike.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Youbike/Info.plist;
@@ -297,6 +385,7 @@
 		};
 		F9E6CF141D2B4C0B00E8B2F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 467DDD6CBB84D9D1EDBD0DD5 /* Pods-Youbike.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Youbike/Info.plist;

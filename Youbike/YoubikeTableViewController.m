@@ -7,22 +7,26 @@
 //
 
 #import "YoubikeTableViewController.h"
+#import "YoubikeModel.h"
+#import "YoubikeManager.h"
 
 @interface YoubikeTableViewController ()
 
+@property (strong, nonatomic) NSMutableArray *youbikeModelArray;
+
 @end
+
 
 @implementation YoubikeTableViewController
 
-     NSArray *tableData;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    tableData = [ NSArray arrayWithObjects: @"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil ];
-    
-    UINib *cellNib = [ UINib nibWithNibName: @"YoubikeDataTableViewCell" bundle:nil ];
+    UINib *cellNib = [ UINib nibWithNibName: @"YoubikeDataTableViewCell" bundle: nil ];
     [ self.tableView registerNib:cellNib forCellReuseIdentifier: @"YoubikeDataTableViewCell" ];
+    
+    self.youbikeModelArray = [[YoubikeManager sharedManager] ParseJson];
 }
 
 
@@ -34,25 +38,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-     return [tableData count];
+    
+    return [self.youbikeModelArray count];
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *TableViewCellIdentifier = @"YoubikeDataTableViewCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: TableViewCellIdentifier];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableViewCellIdentifier];
     }
-    //cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+    
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 120;
 }
 
