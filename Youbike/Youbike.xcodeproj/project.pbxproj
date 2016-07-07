@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BCFC9048ACFA6EF208B8D975 /* Pods_Youbike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C254AB59AB7E291E8A72648 /* Pods_Youbike.framework */; };
+		F97EBB9F1D2DE433005217A7 /* YoubikeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F97EBB9E1D2DE433005217A7 /* YoubikeTableViewCell.m */; };
 		F9962CA11D2B9CAE00D455FA /* YoubikeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9962CA01D2B9CAE00D455FA /* YoubikeModel.m */; };
 		F9962CA41D2BB23300D455FA /* YoubikeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9962CA31D2BB23300D455FA /* YoubikeManager.m */; };
 		F9E6CF001D2B4C0B00E8B2F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6CEFF1D2B4C0B00E8B2F1 /* main.m */; };
@@ -16,7 +17,7 @@
 		F9E6CF0E1D2B4C0B00E8B2F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E6CF0C1D2B4C0B00E8B2F1 /* LaunchScreen.storyboard */; };
 		F9E6CF201D2B5D5A00E8B2F1 /* YoubikeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6CF1F1D2B5D5A00E8B2F1 /* YoubikeTableViewController.m */; };
 		F9E6CF231D2B5E8600E8B2F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E6CF221D2B5E8600E8B2F1 /* Main.storyboard */; };
-		F9E6CF251D2B5E9D00E8B2F1 /* YoubikeDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E6CF241D2B5E9D00E8B2F1 /* YoubikeDataTableViewCell.xib */; };
+		F9E6CF251D2B5E9D00E8B2F1 /* YoubikeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E6CF241D2B5E9D00E8B2F1 /* YoubikeTableViewCell.xib */; };
 		F9E6CF281D2B7CBA00E8B2F1 /* youbike.json in Resources */ = {isa = PBXBuildFile; fileRef = F9E6CF271D2B7CBA00E8B2F1 /* youbike.json */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,8 @@
 		1C254AB59AB7E291E8A72648 /* Pods_Youbike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youbike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		467DDD6CBB84D9D1EDBD0DD5 /* Pods-Youbike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youbike.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youbike/Pods-Youbike.release.xcconfig"; sourceTree = "<group>"; };
 		A3DB02309A797D3BD83EAD98 /* Pods-Youbike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youbike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youbike/Pods-Youbike.debug.xcconfig"; sourceTree = "<group>"; };
+		F97EBB9D1D2DE433005217A7 /* YoubikeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoubikeTableViewCell.h; sourceTree = "<group>"; };
+		F97EBB9E1D2DE433005217A7 /* YoubikeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoubikeTableViewCell.m; sourceTree = "<group>"; };
 		F9962C9F1D2B9CAE00D455FA /* YoubikeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoubikeModel.h; sourceTree = "<group>"; };
 		F9962CA01D2B9CAE00D455FA /* YoubikeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoubikeModel.m; sourceTree = "<group>"; };
 		F9962CA21D2BB23300D455FA /* YoubikeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoubikeManager.h; sourceTree = "<group>"; };
@@ -38,7 +41,7 @@
 		F9E6CF1E1D2B5D5A00E8B2F1 /* YoubikeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoubikeTableViewController.h; sourceTree = SOURCE_ROOT; };
 		F9E6CF1F1D2B5D5A00E8B2F1 /* YoubikeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoubikeTableViewController.m; sourceTree = SOURCE_ROOT; };
 		F9E6CF221D2B5E8600E8B2F1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		F9E6CF241D2B5E9D00E8B2F1 /* YoubikeDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YoubikeDataTableViewCell.xib; sourceTree = "<group>"; };
+		F9E6CF241D2B5E9D00E8B2F1 /* YoubikeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YoubikeTableViewCell.xib; sourceTree = "<group>"; };
 		F9E6CF271D2B7CBA00E8B2F1 /* youbike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = youbike.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				F9E6CF221D2B5E8600E8B2F1 /* Main.storyboard */,
-				F9E6CF241D2B5E9D00E8B2F1 /* YoubikeDataTableViewCell.xib */,
+				F9E6CF241D2B5E9D00E8B2F1 /* YoubikeTableViewCell.xib */,
+				F97EBB9D1D2DE433005217A7 /* YoubikeTableViewCell.h */,
+				F97EBB9E1D2DE433005217A7 /* YoubikeTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -207,7 +212,7 @@
 				F9E6CF0B1D2B4C0B00E8B2F1 /* Assets.xcassets in Resources */,
 				F9E6CF281D2B7CBA00E8B2F1 /* youbike.json in Resources */,
 				F9E6CF231D2B5E8600E8B2F1 /* Main.storyboard in Resources */,
-				F9E6CF251D2B5E9D00E8B2F1 /* YoubikeDataTableViewCell.xib in Resources */,
+				F9E6CF251D2B5E9D00E8B2F1 /* YoubikeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97EBB9F1D2DE433005217A7 /* YoubikeTableViewCell.m in Sources */,
 				F9E6CF031D2B4C0B00E8B2F1 /* AppDelegate.m in Sources */,
 				F9E6CF201D2B5D5A00E8B2F1 /* YoubikeTableViewController.m in Sources */,
 				F9962CA11D2B9CAE00D455FA /* YoubikeModel.m in Sources */,

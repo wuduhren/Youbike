@@ -15,7 +15,8 @@
 @property (nonatomic) CLLocationCoordinate2D *coordinate;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *address;
-@property (strong, nonatomic) NSNumber *numberOfRemainingBikes;
+@property (strong, nonatomic) NSNumber *remainingBikes;
+
 
 @end
 
@@ -27,7 +28,7 @@
 coordinate: (CLLocationCoordinate2D *)coordinate
 name: (NSString *)name
 address: (NSString *)address
-numberOfRemainingBikes: (NSNumber *)numberOfRemainingBikes {
+remainingBikes: (NSNumber *)remainingBikes {
     
     self = [super init];
     
@@ -37,7 +38,7 @@ numberOfRemainingBikes: (NSNumber *)numberOfRemainingBikes {
         self.coordinate = coordinate;
         self.name = name;
         self.address = address;
-        self.numberOfRemainingBikes = numberOfRemainingBikes;
+        self.remainingBikes = remainingBikes;
         
     }
     

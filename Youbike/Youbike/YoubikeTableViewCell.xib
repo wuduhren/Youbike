@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="YoubikeDataTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="YoubikeDataTableViewCell" rowHeight="103" id="p7C-GZ-qJ9" customClass="YoubikeDataTableViewCell" customModule="Youbike" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="YoubikeTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="YoubikeTableViewCell" rowHeight="103" id="p7C-GZ-qJ9" customClass="YoubikeTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p7C-GZ-qJ9" id="pim-ml-utb">
@@ -122,6 +122,11 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="2rA-tq-xxZ" secondAttribute="bottom" id="3oc-ma-s5d"/>
             </constraints>
+            <connections>
+                <outlet property="addressLabel" destination="eyg-rW-y0A" id="lHS-nC-bY5"/>
+                <outlet property="nameLabel" destination="NMe-nP-rph" id="K3O-x3-VhS"/>
+                <outlet property="remainingBikesLabel" destination="oy7-Zy-aJY" id="Qnb-tM-JOh"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

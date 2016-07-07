@@ -9,6 +9,7 @@
 #import "YoubikeTableViewController.h"
 #import "YoubikeModel.h"
 #import "YoubikeManager.h"
+#import "YoubikeTableViewCell.h"
 
 @interface YoubikeTableViewController ()
 
@@ -19,12 +20,13 @@
 
 @implementation YoubikeTableViewController
 
+static NSString *TableViewCellIdentifier = @"YoubikeTableViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UINib *cellNib = [ UINib nibWithNibName: @"YoubikeDataTableViewCell" bundle: nil ];
-    [ self.tableView registerNib:cellNib forCellReuseIdentifier: @"YoubikeDataTableViewCell" ];
+    UINib *cellNib = [ UINib nibWithNibName: TableViewCellIdentifier bundle: nil ];
+    [ self.tableView registerNib: cellNib forCellReuseIdentifier: TableViewCellIdentifier ];
     
     self.youbikeModelArray = [[YoubikeManager sharedManager] ParseJson];
 }
@@ -43,12 +45,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *TableViewCellIdentifier = @"YoubikeDataTableViewCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: TableViewCellIdentifier];
+    YoubikeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: TableViewCellIdentifier];
+    cell.youbikeModel = self.youbikeModelArray[indexPath.row];
+    [cell setup];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableViewCellIdentifier];
+        cell = [[YoubikeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: TableViewCellIdentifier];
+        cell.youbikeModel = self.youbikeModelArray[indexPath.row];
+        [cell setup];
     }
     
     return cell;

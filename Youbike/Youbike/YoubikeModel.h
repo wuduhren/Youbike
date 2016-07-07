@@ -15,7 +15,13 @@
 coordinate: (CLLocationCoordinate2D *)coordinate
       name: (NSString *)name
    address: (NSString *)address
-numberOfRemainingBikes: (NSNumber *)numberOfRemainingBikes;
+remainingBikes: (NSNumber *)remainingBikes;
 
+
+@property (strong, nonatomic, readonly) NSString *identifier;
+@property (nonatomic, readonly) CLLocationCoordinate2D *coordinate;
+@property (strong, nonatomic, readonly) NSString *name;
+@property (strong, nonatomic, readonly) NSString *address;
+@property (strong, nonatomic, readonly) NSNumber *remainingBikes;
 
 @end

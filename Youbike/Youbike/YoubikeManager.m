@@ -63,8 +63,9 @@
             
             NSString *identifier = [youbikeData objectForKey: @"_id"];
             NSString *name = [youbikeData objectForKey: @"sna"];
+            
             NSString *address = [youbikeData objectForKey: @"ar"];
-            NSNumber *numberOfRemainingBikes = [youbikeData objectForKey: @"sbi"];
+            NSNumber *remainingBikes = [youbikeData objectForKey: @"sbi"];
             
             NSNumber *lng = [youbikeData objectForKey: @"lng"];
             NSNumber *lat = [youbikeData objectForKey: @"lat"];
@@ -72,7 +73,7 @@
             double latitude = [lat doubleValue];
             CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);
             
-            YoubikeModel *youbikeModel = [[YoubikeModel alloc] init:identifier coordinate: &coordinate name: name address: address numberOfRemainingBikes: numberOfRemainingBikes];
+            YoubikeModel *youbikeModel = [[YoubikeModel alloc] init:identifier coordinate: &coordinate name: name address: address remainingBikes: remainingBikes];
             [self.youbikeModelArray addObject: youbikeModel];
         }
     }
