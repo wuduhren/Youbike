@@ -9,20 +9,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SBJson4.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>486CD931B4E1E5CC1195F9B972EBE1AF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DACBADD4E5B083E70608A398823CF1EF</key>
+		<key>39AB4F6460F911A2C2BB12A3B02C0C9A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
