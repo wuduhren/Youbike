@@ -10,6 +10,7 @@
 #import "YoubikeTableViewController.h"
 #import "YoubikeModel.h"
 #import <CoreLocation/CoreLocation.h>
+#import "AFNetworking.h"
 
 
 @interface YoubikeManager()
@@ -65,12 +66,28 @@
             NSString *name = [youbikeData objectForKey: @"sna"];
             
             NSString *address = [youbikeData objectForKey: @"ar"];
+            
+            
+            if ([youbikeData[@"sbi"] isKindOfClass: [NSNumber class]]) {
+                NSLog(@"remainingBikes is not a NSNumber");
+                return self.youbikeModelArray;
+            }
             NSNumber *remainingBikes = [youbikeData objectForKey: @"sbi"];
             
+            if ([youbikeData[@"lng"] isKindOfClass: [NSNumber class]]) {
+                NSLog(@"longitude is not a NSNumber");
+                return self.youbikeModelArray;
+            }
             NSNumber *lng = [youbikeData objectForKey: @"lng"];
-            NSNumber *lat = [youbikeData objectForKey: @"lat"];
             double longitude = [lng doubleValue];
+
+            if ([youbikeData[@"lat"] isKindOfClass: [NSNumber class]]) {
+                NSLog(@"latitude is not a NSNumber");
+                return self.youbikeModelArray;
+            }
+            NSNumber *lat = [youbikeData objectForKey: @"lat"];
             double latitude = [lat doubleValue];
+
             CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);
             
             YoubikeModel *youbikeModel = [[YoubikeModel alloc] init:identifier coordinate: &coordinate name: name address: address remainingBikes: remainingBikes];
