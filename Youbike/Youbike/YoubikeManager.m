@@ -12,6 +12,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import "AFNetworking.h"
 
+typedef void (^ SuccessBlock)(NSMutableArray *youbikeModelArray);
+typedef void (^ FailureBlock)();
 
 @interface YoubikeManager()
 
@@ -36,17 +38,36 @@
 
 
 
-- (NSMutableArray *)ParseJson {
+- (void)GetYoubikesData:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock {
     
     self.youbikeModelArray = [[NSMutableArray alloc] init];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource: @"youbike" ofType: @"json"];
-    NSString *jsonString = [[NSString alloc]
-                            initWithContentsOfFile: path
-                            encoding:NSUTF8StringEncoding
-                            error: nil];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager GET: @"http://data.taipei/youbike" parameters: nil progress: nil success: ^(NSURLSessionTask *task, id responseObject) {
+        
+        [self ParseJson: responseObject];
+        successBlock(self.youbikeModelArray);
+        
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
     
-    NSData* jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+}
+
+
+
+- (void)ParseJson: (id)responseObject {
+    
+// local JSON File
+//    NSString *path = [[NSBundle mainBundle] pathForResource: @"youbike" ofType: @"json"];
+//    NSString *jsonString = [[NSString alloc]
+//                            initWithContentsOfFile: path
+//                            encoding:NSUTF8StringEncoding
+//                            error: nil];
+//    NSData* jsonData = [responseObject dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSData *jsonData = (NSData *) responseObject;
     NSError *error = nil;
     
     id json = [NSJSONSerialization
@@ -57,36 +78,43 @@
     
     if([json isKindOfClass:[NSDictionary class]]){
         
-        NSDictionary *result = [json objectForKey: @"result"];
-        NSArray *results = [result objectForKey: @"results"];
+        NSDictionary *retVal = [json objectForKey: @"retVal"];
         
-        for (NSDictionary *youbikeData in results) {
+        for (NSString *youbikeID in [retVal allKeys]) {
+            NSDictionary *youbike = [retVal objectForKey: youbikeID];
+            //NSLog(@"youbike: %@", youbike);
             
-            NSString *identifier = [youbikeData objectForKey: @"_id"];
-            NSString *name = [youbikeData objectForKey: @"sna"];
+            NSString *identifier = [youbike objectForKey: @"sno"];
+            //NSLog(@"identifier: %@", identifier);
             
-            NSString *address = [youbikeData objectForKey: @"ar"];
+            NSString *name = [youbike objectForKey: @"sna"];
+            //NSLog(@"name: %@", name);
             
+            NSString *address = [youbike objectForKey: @"ar"];
+            //NSLog(@"address: %@", address);
             
-            if ([youbikeData[@"sbi"] isKindOfClass: [NSNumber class]]) {
+            if ([youbike[@"sbi"] isKindOfClass: [NSNumber class]]) {
                 NSLog(@"remainingBikes is not a NSNumber");
-                return self.youbikeModelArray;
+                return;
             }
-            NSNumber *remainingBikes = [youbikeData objectForKey: @"sbi"];
+            NSNumber *remainingBikes = [youbike objectForKey: @"sbi"];
+            //NSLog(@"remainingBikes: %@", remainingBikes);
             
-            if ([youbikeData[@"lng"] isKindOfClass: [NSNumber class]]) {
+            if ([youbike[@"lng"] isKindOfClass: [NSNumber class]]) {
                 NSLog(@"longitude is not a NSNumber");
-                return self.youbikeModelArray;
+                return;
             }
-            NSNumber *lng = [youbikeData objectForKey: @"lng"];
+            NSNumber *lng = [youbike objectForKey: @"lng"];
             double longitude = [lng doubleValue];
+            //NSLog(@"longitude: %f", longitude);
 
-            if ([youbikeData[@"lat"] isKindOfClass: [NSNumber class]]) {
+            if ([youbike[@"lat"] isKindOfClass: [NSNumber class]]) {
                 NSLog(@"latitude is not a NSNumber");
-                return self.youbikeModelArray;
+                return;
             }
-            NSNumber *lat = [youbikeData objectForKey: @"lat"];
+            NSNumber *lat = [youbike objectForKey: @"lat"];
             double latitude = [lat doubleValue];
+            //NSLog(@"latitude: %f", latitude);
 
             CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);
             
@@ -95,15 +123,8 @@
         }
     }
     
-    return self.youbikeModelArray;
+    
 }
-
-
-
-
-
-
-
 
 
 @end
