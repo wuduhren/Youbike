@@ -12,6 +12,8 @@
 
 + (id)sharedManager;
 
-- (NSMutableArray *)ParseJson;
+typedef void (^ SuccessBlock)(NSMutableArray *youbikeModelArray);
+typedef void (^ FailureBlock)();
+- (void)GetYoubikesData:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock;
 
 @end

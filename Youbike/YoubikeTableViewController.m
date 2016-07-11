@@ -24,11 +24,24 @@ static NSString *TableViewCellIdentifier = @"YoubikeTableViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setup];
+}
+
+-(void)setup {
     
+    //register nib
     UINib *cellNib = [ UINib nibWithNibName: TableViewCellIdentifier bundle: nil ];
     [ self.tableView registerNib: cellNib forCellReuseIdentifier: TableViewCellIdentifier ];
-    
-    self.youbikeModelArray = [[YoubikeManager sharedManager] ParseJson];
+
+    //GET data
+    __weak YoubikeTableViewController *weakSelf = self;
+    [[YoubikeManager sharedManager] GetYoubikesData:^(NSMutableArray *youbikeModelArray) {
+        
+        weakSelf.youbikeModelArray = youbikeModelArray;
+        [weakSelf.tableView reloadData];
+    } failureBlock:^{
+        //do some error handle
+    }];
 }
 
 
