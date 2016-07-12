@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BCFC9048ACFA6EF208B8D975 /* Pods_Youbike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C254AB59AB7E291E8A72648 /* Pods_Youbike.framework */; };
+		F9516D951D339EB5003DFCCA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9516D941D339EB5003DFCCA /* MapViewController.m */; };
+		F960C7281D34CD83007C79B2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F960C7271D34CD83007C79B2 /* MapKit.framework */; };
 		F97EBB9F1D2DE433005217A7 /* YoubikeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F97EBB9E1D2DE433005217A7 /* YoubikeTableViewCell.m */; };
 		F9962CA11D2B9CAE00D455FA /* YoubikeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9962CA01D2B9CAE00D455FA /* YoubikeModel.m */; };
 		F9962CA41D2BB23300D455FA /* YoubikeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9962CA31D2BB23300D455FA /* YoubikeManager.m */; };
@@ -25,6 +27,9 @@
 		1C254AB59AB7E291E8A72648 /* Pods_Youbike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youbike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		467DDD6CBB84D9D1EDBD0DD5 /* Pods-Youbike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youbike.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youbike/Pods-Youbike.release.xcconfig"; sourceTree = "<group>"; };
 		A3DB02309A797D3BD83EAD98 /* Pods-Youbike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youbike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youbike/Pods-Youbike.debug.xcconfig"; sourceTree = "<group>"; };
+		F9516D931D339EB5003DFCCA /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		F9516D941D339EB5003DFCCA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		F960C7271D34CD83007C79B2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F97EBB9D1D2DE433005217A7 /* YoubikeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoubikeTableViewCell.h; sourceTree = "<group>"; };
 		F97EBB9E1D2DE433005217A7 /* YoubikeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoubikeTableViewCell.m; sourceTree = "<group>"; };
 		F9962C9F1D2B9CAE00D455FA /* YoubikeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoubikeModel.h; sourceTree = "<group>"; };
@@ -50,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F960C7281D34CD83007C79B2 /* MapKit.framework in Frameworks */,
 				BCFC9048ACFA6EF208B8D975 /* Pods_Youbike.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +66,7 @@
 		4EDB03331415DA6C6DF5CF56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F960C7271D34CD83007C79B2 /* MapKit.framework */,
 				1C254AB59AB7E291E8A72648 /* Pods_Youbike.framework */,
 			);
 			name = Frameworks;
@@ -72,6 +79,16 @@
 				467DDD6CBB84D9D1EDBD0DD5 /* Pods-Youbike.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F9516D921D339CC4003DFCCA /* YoubikeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F97EBB9D1D2DE433005217A7 /* YoubikeTableViewCell.h */,
+				F97EBB9E1D2DE433005217A7 /* YoubikeTableViewCell.m */,
+				F9E6CF241D2B5E9D00E8B2F1 /* YoubikeTableViewCell.xib */,
+			);
+			name = YoubikeTableViewCell;
 			sourceTree = "<group>";
 		};
 		F9E6CEF21D2B4C0B00E8B2F1 = {
@@ -95,11 +112,13 @@
 		F9E6CEFD1D2B4C0B00E8B2F1 /* Youbike */ = {
 			isa = PBXGroup;
 			children = (
-				F9E6CF291D2B974E00E8B2F1 /* Youbike */,
-				F9E6CF261D2B5FC600E8B2F1 /* Utilities */,
-				F9E6CF211D2B5E6600E8B2F1 /* View */,
+				F9E6CF221D2B5E8600E8B2F1 /* Main.storyboard */,
 				F9E6CF1E1D2B5D5A00E8B2F1 /* YoubikeTableViewController.h */,
 				F9E6CF1F1D2B5D5A00E8B2F1 /* YoubikeTableViewController.m */,
+				F9516D931D339EB5003DFCCA /* MapViewController.h */,
+				F9516D941D339EB5003DFCCA /* MapViewController.m */,
+				F9516D921D339CC4003DFCCA /* YoubikeTableViewCell */,
+				F9E6CF291D2B974E00E8B2F1 /* Youbike */,
 				F9E6CEFE1D2B4C0B00E8B2F1 /* Supporting Files */,
 			);
 			path = Youbike;
@@ -108,6 +127,8 @@
 		F9E6CEFE1D2B4C0B00E8B2F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F9E6CF011D2B4C0B00E8B2F1 /* AppDelegate.h */,
+				F9E6CF021D2B4C0B00E8B2F1 /* AppDelegate.m */,
 				F9E6CF0F1D2B4C0B00E8B2F1 /* Info.plist */,
 				F9E6CF0A1D2B4C0B00E8B2F1 /* Assets.xcassets */,
 				F9E6CF0C1D2B4C0B00E8B2F1 /* LaunchScreen.storyboard */,
@@ -115,26 +136,6 @@
 				F9E6CEFF1D2B4C0B00E8B2F1 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F9E6CF211D2B5E6600E8B2F1 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F9E6CF221D2B5E8600E8B2F1 /* Main.storyboard */,
-				F9E6CF241D2B5E9D00E8B2F1 /* YoubikeTableViewCell.xib */,
-				F97EBB9D1D2DE433005217A7 /* YoubikeTableViewCell.h */,
-				F97EBB9E1D2DE433005217A7 /* YoubikeTableViewCell.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		F9E6CF261D2B5FC600E8B2F1 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				F9E6CF011D2B4C0B00E8B2F1 /* AppDelegate.h */,
-				F9E6CF021D2B4C0B00E8B2F1 /* AppDelegate.m */,
-			);
-			name = Utilities;
 			sourceTree = "<group>";
 		};
 		F9E6CF291D2B974E00E8B2F1 /* Youbike */ = {
@@ -277,6 +278,7 @@
 				F9962CA11D2B9CAE00D455FA /* YoubikeModel.m in Sources */,
 				F9962CA41D2BB23300D455FA /* YoubikeManager.m in Sources */,
 				F9E6CF001D2B4C0B00E8B2F1 /* main.m in Sources */,
+				F9516D951D339EB5003DFCCA /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

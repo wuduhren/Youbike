@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "YoubikeModel.h"
+#import "YoubikeTableViewController.h"
 
 @interface YoubikeTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) YoubikeModel *youbikeModel;
+@property (nonatomic, weak) id <ViewMapDelegate> delegate;
 
 - (void)setup;
 
