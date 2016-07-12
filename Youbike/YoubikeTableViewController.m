@@ -10,8 +10,16 @@
 #import "YoubikeModel.h"
 #import "YoubikeManager.h"
 #import "YoubikeTableViewCell.h"
+#import "MapViewController.h"
 
-@interface YoubikeTableViewController ()
+@protocol Hello <NSObject>
+
+- (void)sayHello;
+
+@end
+
+
+@interface YoubikeTableViewController()
 
 @property (strong, nonatomic) NSMutableArray *youbikeModelArray;
 
@@ -19,6 +27,11 @@
 
 
 @implementation YoubikeTableViewController
+
+
+- (void)viewMap:(id)sender {
+    [self performSegueWithIdentifier:@"MapViewController" sender:nil];
+}
 
 static NSString *TableViewCellIdentifier = @"YoubikeTableViewCell";
 
@@ -44,6 +57,14 @@ static NSString *TableViewCellIdentifier = @"YoubikeTableViewCell";
     }];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"MapViewController"])
+    {
+        MapViewController *viewController = [segue destinationViewController];
+    }
+}
+
 
 #pragma mark - Table view data source
 
@@ -62,11 +83,13 @@ static NSString *TableViewCellIdentifier = @"YoubikeTableViewCell";
     YoubikeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: TableViewCellIdentifier];
     cell.youbikeModel = self.youbikeModelArray[indexPath.row];
     [cell setup];
+    cell.delegate = self;
     
     if (cell == nil) {
         cell = [[YoubikeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: TableViewCellIdentifier];
         cell.youbikeModel = self.youbikeModelArray[indexPath.row];
         [cell setup];
+        cell.delegate = self;
     }
     
     return cell;

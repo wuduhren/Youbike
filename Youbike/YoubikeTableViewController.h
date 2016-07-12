@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YoubikeTableViewController : UITableViewController
+@protocol ViewMapDelegate <NSObject>
+
+- (void)viewMap:(id)sender;
+
+@end
+
+
+
+
+
+
+@interface YoubikeTableViewController : UITableViewController <ViewMapDelegate>
 
 @end

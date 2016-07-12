@@ -9,13 +9,16 @@
 #import "YoubikeTableViewCell.h"
 #import "YoubikeModel.h"
 
+
 @interface YoubikeTableViewCell()
+
 
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *remainingBikesLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
 
 @end
 
@@ -31,13 +34,16 @@
 }
 
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
 }
+
+- (IBAction)ViewMap:(UIButton *)sender {
+    [self.delegate viewMap:self];
+    
+}
+
+
 
 @end
